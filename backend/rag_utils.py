@@ -20,12 +20,11 @@ def generate(query, retrieved_chunks,model) -> str:
     2. If the question names a property (for example ASH-MIA Brickell), use only the rule or value listed for that property.
     3. Include every condition, exception, limit, deadline, fee amount, and approval requirement that applies to the question.
     4. When the answer depends on the rate plan, booking channel, or confirmation terms, say so explicitly.
-    5. Answer the question directly in the first sentence, then add the supporting conditions. Keep it concise (2 to 6 sentences or short bullets).
+    5. Answer the question directly in the first sentence, then add the supporting conditions. Keep it concise (2 to 4 sentences) and do not add background the question did not ask for.
     6. Do not include retrieved information that is unrelated to the question.
     7. Never promise a refund, waiver, or exception that the policy says requires manager, Finance, or other approval; state who must approve it.
     8. If the retrieved information is insufficient, reply exactly: "The available policy documents do not contain enough information to answer this question. Please check with the property team or escalate."
     9. If retrieved passages conflict, state the conflict and recommend confirming with the property team.
-    10. End with a one-line "Source:" naming the policy document(s) used.
     """
 
     prompt = f"""
